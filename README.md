@@ -21,4 +21,12 @@ jupyter-repo2docker \
    https://github.com/ExaESM-WP4/Containerized-Jupyter-on-HPC
 ```
 picking an image name.
+
+There is an image in <https://hub.docker.com/repository/docker/exaesmwp4/containerized-jupyter-on-hpc> which you can use for the next steps.
  
+## Running with Singularity
+
+Once the image is built and with singularity in the path, run
+```shell
+singularity -vvv run -B $(mktemp -d):/run/user docker://exaesmwp4/containerized-jupyter-on-hpc:latest
+```
