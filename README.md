@@ -34,9 +34,8 @@ singularity run \
     docker://exaesmwp4/containerized-jupyter-on-hpc:latest
 ```
 
+(Note that you might want to replace `docker://exaesmwp4/containerized-jupyter-on-hpc:latest` with wherever you pushed the image.)
+
 ## Connect to Jupyter on a remote server
 
 If `singularity` runs on a remote server and listens on a port that you cannot directly connect to (as is the default for HPC compute or frontend nodes), one possible solution is using an SSH tunnel to foward browser traffic.  Follow [this guide](https://git.geomar.de/python/jupyter_on_HPC_setup_guide#connect-to-jupyterlab-running-on-a-remote-machine) to learn how to do this.
-
-
-(Note that you might want to replace `docker://exaesmwp4/containerized-jupyter-on-hpc:latest` with wherever you pushed the image.)
