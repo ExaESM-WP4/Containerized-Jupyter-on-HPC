@@ -34,6 +34,13 @@ singularity run \
     docker://exaesmwp4/containerized-jupyter-on-hpc:latest
 ```
 
+This will start Jupyter and expose it on the internal network.  Look for something along the lines of 
+```shell
+The Jupyter Notebook is running at:
+http://127.0.0.1:8888/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+to learn where to connect to Jupyter.
+
 (Note that you might want to replace `docker://exaesmwp4/containerized-jupyter-on-hpc:latest` with wherever you pushed the image.)
 
 ## Connect to Jupyter on a remote server
