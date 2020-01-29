@@ -26,7 +26,12 @@ There is an image in <https://hub.docker.com/repository/docker/exaesmwp4/contain
  
 ## Running with Singularity
 
-Once the image is built and with singularity in the path, run
+Once the image is built and with singularity in the path, run:
 ```shell
-singularity -vvv run -B $(mktemp -d):/run/user docker://exaesmwp4/containerized-jupyter-on-hpc:latest
+singularity run \
+    -B $(mktemp -d):/run/user \
+    --pwd /home/jovyan/ \
+    docker://exaesmwp4/containerized-jupyter-on-hpc:latest
 ```
+
+(Note that you might want to replace `docker://exaesmwp4/containerized-jupyter-on-hpc:latest` with wherever you pushed the image.)
